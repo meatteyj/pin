@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pins</h1>
+<div class= "panel-custom">
+  <div class="panel-heading">
+    <h1>Listing Pins</h1>
+  </div>
+  <div class="panel-body">
 
 <table>
   <thead>
@@ -14,8 +18,10 @@
     <% @pins.each do |pin| %>
       <tr>
         <td><%= pin.description %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+        <td><%= link_to "Show", pin %></td>
+        <td>_</td>
+        <td><%= link_to "Edit", edit_pin_path(pin) %></td>
+        <td>_</td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -23,5 +29,10 @@
 </table>
 
 <br>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'New Pin', new_pin_path %>
+  </div>
+</div>
 
-<%= link_to 'New Pin', new_pin_path %>
+  

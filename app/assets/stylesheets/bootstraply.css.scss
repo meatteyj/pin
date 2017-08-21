@@ -1,4 +1,18 @@
 $jumbotron-bg: #B22222;
 
+.panel-custom > .panel-heading {
+    background: #B22222;
+    border-color: #336EFF;
+}
+.panel-custom > .panel-body {
+    background: #B22222;
+    border-color: #336EFF;
+}   
+.panel-custom > .panel-footer {
+    background: #B22222;
+    border-color: #336EFF;
+}
+    
+    
 @import "bootstrap-sprockets";
 @import "bootstrap";
