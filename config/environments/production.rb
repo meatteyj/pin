@@ -78,12 +78,14 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: 'jmeattey-pin.herokuapp.com' }
   config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
+    s3_credentials: {
+      :storage => :s3,
       :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      :secret_access_key => ENV['AWS_SECRET_KEY_ID'],
+      s3_region: ENV.fetch('AWS_REGION'),
     }
+    
     }
 end
  
