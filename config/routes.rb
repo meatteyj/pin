@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/about'
   get 'home/contact'
-  get 'home/googled2377219c2371e1e'
+  
   
   
 
